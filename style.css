@@ -230,3 +230,7 @@ h1.entry-title {
 p {
     margin-bottom: 12px;
 }
+
+.page-header {
+    background-color: transparent;
+}
