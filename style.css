@@ -1,0 +1,232 @@
+/*
+ Theme Name:        5280 Pool League (based on Twenty Thirteen)
+ Template:          twentythirteen
+ */
+
+body, #page {
+    color: #EBEBDA;
+    background-color: #22211C;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+#masthead {
+    background-color: #F2DEA1;
+    background-image: url(images/hdrbg02.jpg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 642px) {
+    .entry-header {
+        margin-bottom: 10px;
+    }
+
+    h1.entry-title {
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 643px) {
+    .site-header .home-link {
+        float: left;
+        min-height: 0;
+        width: auto;
+        background-image: url(images/temp_logo.gif);
+        width: 415px;
+        height: 70px;
+        margin: 10px;
+    }
+
+    .site-header .home-link .site-title {
+        position: absolute;
+        left: -2000px;
+    }
+
+    #tertiary {
+        position: absolute;
+        right: 10px;
+        width: auto;
+    }
+
+    .sidebar .site-info {
+        text-align: right;
+        position: relative;
+        top: -40px;
+    }
+}
+
+.site-title {
+    padding: 0;
+}
+
+#navbar {
+    background: transparent;
+    float: right;
+    width: auto;
+}
+
+#main {
+    background-color: #33685E;
+    background-image: url(images/bdyBGtop.gif);
+    background-position: top;
+    background-repeat: repeat-x;
+    padding: 0 10px;
+}
+
+h1.entry-title {
+    background-image: url(images/h1_bg.gif);
+    background-repeat: repeat-x;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 6px 0 10px 0;
+    padding: 4px 0 0 10px;
+    height: 42px;
+}
+
+#tertiary {
+    margin: 0;
+    margin-top: -10px;
+    color: #EBEBDA;
+    background-image: url(images/sidebarBG_02.gif);
+    background-size: contain;
+    background-repeat: repeat-y;
+    padding: 10px 20px 10px 25px;
+}
+
+#tertiary .widget {
+    margin: 0;
+}
+
+.widget {
+    background-color: transparent;
+    padding: 0;
+}
+
+.widget a {
+    color: #8EBDB3;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.widget .menu li {
+    padding: 0;
+}
+
+.widget .menu li a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.widget .menu li ul a {
+    font-weight: normal;
+    color: #8EBDB3;
+    text-decoration: underline;
+}
+
+.widget li > ul {
+    margin-left: 0;
+}
+
+.widget .widget-title {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    padding: 4px 0;
+    margin: 0;
+    color: #ffffff;
+}
+
+.site-footer {
+    color: #665E41;
+    background-color: #22211C;
+    background-image: url(images/bottomBG.gif);
+    background-position: top;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: repeat-x;
+    padding: 40px 0 20px 0;
+}
+
+.site-footer .sidebar-container {
+    background-color: transparent;
+    padding: 0;
+}
+
+.sidebar .site-info {
+    text-align: center;
+    font-size: 9px;
+    padding: 0;
+    margin: 0px;
+    max-width: none;
+    width: 100%;
+}
+.site-info::after {
+    content: "Copyright \00a9  2014 \2014  5280 Pool League.  All rights reserved.";
+}
+
+.nav-menu li a {
+    color: #33685E;
+}
+.nav-menu li a:hover {
+    color: #33685E;
+    background: transparent;
+}
+
+.site-info a {
+    display: none;
+}
+
+.site-header .search-form {
+    right: 0px;
+}
+
+.menu-toggle {
+    margin-right: 40px;
+}
+
+.sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
+    margin-left: 10px;
+}
+
+.hentry {
+    padding: 10px 0;
+}
+
+#secondary .widget-title {
+    display: none;
+}
+
+#secondary li {
+    display: inline;
+    margin: 0 1em;
+}
+
+#secondary li a {
+    border-bottom: 1px dashed #45402E;
+    color: #665E41;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.entry-content a, .comment-content a {
+    color: #8EBDB3;
+}
+
+p {
+    margin-bottom: 12px;
+}
