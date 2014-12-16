@@ -264,6 +264,11 @@ td, th, caption {
 }
 
 @media print {
+    body,#page,h1.entry-title {
+        color: black;
+        border-color: black;
+    }
+
     #masthead {
         display: none;
     }
