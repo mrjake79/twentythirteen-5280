@@ -20,19 +20,13 @@ body, #page {
     padding-bottom: 20px;
 }
 
-@media (max-width: 642px) {
-    .entry-header {
-        margin-bottom: 10px;
-    }
+.entry-header {
+    margin-bottom: 10px;
+}
 
-    h1.entry-title {
-        margin: 0;
-    }
-
-    h2 {
-        font-size: 15px;
-        margin: 0;
-    }
+h2 {
+    font-size: 20px;
+    margin: 0 4px;
 }
 
 @media (min-width: 643px) {
@@ -51,16 +45,35 @@ body, #page {
         left: -2000px;
     }
 
-    #tertiary {
-        position: absolute;
-        right: 10px;
-        width: auto;
-    }
-
     .sidebar .site-info {
         text-align: right;
         position: relative;
         top: -40px;
+    }
+
+    .sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 643px) {
+    #tertiary {
+        position: absolute;
+        right: 10px;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    #tertiary {
+        height: auto;
+        width: auto;
+    }
+
+    .site-main .widget-area {
+        width: auto;
+        float: none;
     }
 }
 
@@ -82,6 +95,16 @@ body, #page {
     padding: 0 10px;
 }
 
+@media (max-width: 642px) {
+    #main {
+        padding: 0;
+    }
+
+    #content .entry-header, #content .entry-content {
+        padding: 0;
+    }
+}
+
 h1.entry-title {
     background-image: url(images/h1_bg.gif);
     background-repeat: repeat-x;
@@ -91,7 +114,7 @@ h1.entry-title {
     font-style: italic;
     font-weight: normal;
     margin: 6px 0 10px 0;
-    padding: 4px 0 0 10px;
+    padding: 4px;
     height: 42px;
 }
 
@@ -198,10 +221,6 @@ h1.entry-title {
     margin-right: 40px;
 }
 
-.sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
-    margin-left: 10px;
-}
-
 .hentry {
     padding: 10px 0;
 }
@@ -233,4 +252,31 @@ p {
 
 .page-header {
     background-color: transparent;
+}
+
+table {
+    font-size: inherit;
+}
+
+td, th, caption {
+    padding: 2px 5px;
+    margin: 0;
+}
+
+@media print {
+    #masthead {
+        display: none;
+    }
+    .entry-header {
+        position: absolute;
+        display: inline-block;
+        top: 0; left: 0;
+        width: auto;
+    }
+    .subtitle {
+        float: right;
+        text-align: right;
+        margin-right: 0;
+        padding-right: 0;
+    }
 }
