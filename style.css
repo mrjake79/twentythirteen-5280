@@ -20,19 +20,17 @@ body, #page {
     padding-bottom: 20px;
 }
 
+.entry-header {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 15px;
+    margin: 0 4px;
+}
+
 @media (max-width: 642px) {
-    .entry-header {
-        margin-bottom: 10px;
-    }
 
-    h1.entry-title {
-        margin: 0;
-    }
-
-    h2 {
-        font-size: 15px;
-        margin: 0;
-    }
 }
 
 @media (min-width: 643px) {
@@ -91,7 +89,7 @@ h1.entry-title {
     font-style: italic;
     font-weight: normal;
     margin: 6px 0 10px 0;
-    padding: 4px 0 0 10px;
+    padding: 4px;
     height: 42px;
 }
 
@@ -99,9 +97,16 @@ h1.entry-title {
     margin: 0;
     margin-top: -10px;
     color: #EBEBDA;
-    background-image: url(images/sidebarBG_02.gif);
+    /*background-image: url(images/sidebarBG_02.gif);
     background-size: contain;
-    background-repeat: repeat-y;
+    background-repeat: repeat-y;*/
+
+    border: 10px solid transparent;
+    border-image-source: url(images/sidebarBG.gif);
+    border-image-slice: 10;
+    background-color: #23403e;
+    background-clip: padding-box;
+
     padding: 10px 20px 10px 25px;
 }
 
@@ -233,4 +238,55 @@ p {
 
 .page-header {
     background-color: transparent;
+}
+
+div.my5280-league-page div.league-page-section {
+    margin-bottom: 2em;
+}
+
+.my5280-schedule .matchContainer {
+    padding: 2px 4px;
+}
+
+.my5280-schedule .headerContainer {
+    width: 6em;
+}
+
+.my5280-schedule .headerContainer,
+.my5280-schedule .matchContainer,
+.my5280-schedule .noMatchContainer {
+    padding-right: 10px;
+    border-bottom: solid 1px;
+}
+
+.my5280-schedule .location { 
+    font-size: smaller;
+}
+
+.my5280-schedule .separator {
+    display: none;
+}
+
+.my5280-schedule .date {
+    font-size: smaller;
+}
+
+.my5280-standings th {
+    text-align: left;
+}
+
+.my5280-standings td {
+    padding: 2px 5px;
+}
+
+.my5280-standings th.stat,
+.my5280-standings td.stat,
+.my5280-standings th.rank,
+.my5280-standings td.rank {
+    text-align: center;
+    width: 4em;
+}
+
+table {
+    font-size: 11px;
 }
