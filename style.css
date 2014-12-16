@@ -25,12 +25,8 @@ body, #page {
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin: 0 4px;
-}
-
-@media (max-width: 642px) {
-
 }
 
 @media (min-width: 643px) {
@@ -49,16 +45,35 @@ h2 {
         left: -2000px;
     }
 
-    #tertiary {
-        position: absolute;
-        right: 10px;
-        width: auto;
-    }
-
     .sidebar .site-info {
         text-align: right;
         position: relative;
         top: -40px;
+    }
+
+    .sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 643px) {
+    #tertiary {
+        position: absolute;
+        right: 10px;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    #tertiary {
+        height: auto;
+        width: auto;
+    }
+
+    .site-main .widget-area {
+        width: auto;
+        float: none;
     }
 }
 
@@ -80,6 +95,16 @@ h2 {
     padding: 0 10px;
 }
 
+@media (max-width: 642px) {
+    #main {
+        padding: 0;
+    }
+
+    #content .entry-header, #content .entry-content {
+        padding: 0;
+    }
+}
+
 h1.entry-title {
     background-image: url(images/h1_bg.gif);
     background-repeat: repeat-x;
@@ -97,16 +122,9 @@ h1.entry-title {
     margin: 0;
     margin-top: -10px;
     color: #EBEBDA;
-    /*background-image: url(images/sidebarBG_02.gif);
+    background-image: url(images/sidebarBG_02.gif);
     background-size: contain;
-    background-repeat: repeat-y;*/
-
-    border: 10px solid transparent;
-    border-image-source: url(images/sidebarBG.gif);
-    border-image-slice: 10;
-    background-color: #23403e;
-    background-clip: padding-box;
-
+    background-repeat: repeat-y;
     padding: 10px 20px 10px 25px;
 }
 
@@ -203,10 +221,6 @@ h1.entry-title {
     margin-right: 40px;
 }
 
-.sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
-    margin-left: 10px;
-}
-
 .hentry {
     padding: 10px 0;
 }
@@ -240,53 +254,34 @@ p {
     background-color: transparent;
 }
 
-div.my5280-league-page div.league-page-section {
-    margin-bottom: 2em;
-}
-
-.my5280-schedule .matchContainer {
-    padding: 2px 4px;
-}
-
-.my5280-schedule .headerContainer {
-    width: 6em;
-}
-
-.my5280-schedule .headerContainer,
-.my5280-schedule .matchContainer,
-.my5280-schedule .noMatchContainer {
-    padding-right: 10px;
-    border-bottom: solid 1px;
-}
-
-.my5280-schedule .location { 
-    font-size: smaller;
-}
-
-.my5280-schedule .separator {
-    display: none;
-}
-
-.my5280-schedule .date {
-    font-size: smaller;
-}
-
-.my5280-standings th {
-    text-align: left;
-}
-
-.my5280-standings td {
-    padding: 2px 5px;
-}
-
-.my5280-standings th.stat,
-.my5280-standings td.stat,
-.my5280-standings th.rank,
-.my5280-standings td.rank {
-    text-align: center;
-    width: 4em;
-}
-
 table {
-    font-size: 11px;
+    font-size: inherit;
+}
+
+td, th, caption {
+    padding: 2px 5px;
+    margin: 0;
+}
+
+@media print {
+    body,#page,h1.entry-title {
+        color: black;
+        border-color: black;
+    }
+
+    #masthead {
+        display: none;
+    }
+    .entry-header {
+        position: absolute;
+        display: inline-block;
+        top: 0; left: 0;
+        width: auto;
+    }
+    .subtitle {
+        float: right;
+        text-align: right;
+        margin-right: 0;
+        padding-right: 0;
+    }
 }
