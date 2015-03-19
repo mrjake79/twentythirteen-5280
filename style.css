@@ -284,4 +284,8 @@ td, th, caption {
         margin-right: 0;
         padding-right: 0;
     }
+
+    .screen-only {
+        display: non;
+    }
 }
