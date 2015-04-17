@@ -21,8 +21,28 @@ add_filter('login_redirect', function($redirect_to, $request, $user) {
 }, 10, 3);
 
 // Customize the login page
-if(is_plugin_active('wordpress-social-login')) {
-    add_action('login_enqueue_scripts', function() {
-        wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/style-login.css');
-    });
-}
+add_action('login_enqueue_scripts', function() {
+    wp_enqueue_style('custom-login', get_stylesheet_directory_uri() . '/style-login.css');
+});
+
+// Remove default meta boxes
+add_action('wp_dashboard_setup', function() {
+    remove_meta_box('projectmanager_dashboard', 'dashboard', 'normal');
+    remove_meta_box('leaguemanager_dashboard', 'dashboard', 'normal');
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+    remove_meta_box('dashboard_activity', 'dashboard', 'normal');
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    remove_meta_box('dashboard_primary', 'dashboard', 'side');
+}, 15);
+
+// Add login menu item
+add_filter('wp_nav_menu_items', function($items, $args) {
+    if($args->theme_location == 'primary') {
+        if(is_user_logged_in()) {
+            $items .= "<li><a href='" . wp_logout_url() . "'>Log Out</a></li>";
+        } else {
+            $items .= "<li><a href='" . site_url('wp-login.php') . "'>Log In</a></li>";
+        }
+    }
+    return $items;
+}, 10, 2);
