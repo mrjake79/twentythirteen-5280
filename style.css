@@ -34,7 +34,7 @@ h2 {
         float: left;
         min-height: 0;
         width: auto;
-        background-image: url(images/temp_logo.gif);
+        /*background-image: url(images/temp_logo.gif);*/
         width: 415px;
         height: 70px;
         margin: 10px;
